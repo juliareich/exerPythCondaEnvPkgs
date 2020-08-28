@@ -37,34 +37,40 @@
 
 |   Concept   |         Description or short answer         |
 |     ---     |                     ---                     |
-|What is the purpose of having different environments?     |(enter description or short answer here)|
-|What is the default package manager in Python?            |(enter description or short answer here)|
-|How do you manage environments and packages in Anaconda?  |(enter description or short answer here)|
-|`conda list`       |(enter description or short answer here)|
-|`conda env list`       |(enter description or short answer here)|
-|How do you keep your base environment unchanged?       |(enter description or short answer here)|
-|What is the link to the Conda cheat sheet? (link in video notes is broken)      |(enter description or short answer here)|
-|`conda create --name XXXX`       |(enter description or short answer here)|
-|`source activate XXXX`       |(enter description or short answer here)|
-|`conda install YYYY`       |(enter description or short answer here)|
-|channels in Conda       |(enter description or short answer here)|
-|`conda install -c ZZZZ YYYY`       |(enter description or short answer here)|
-|`conda config --show channels`       |(enter description or short answer here)|
-|`conda config --add channels ZZZZ`       |(enter description or short answer here)|
-|conda-forge.org       |(enter description or short answer here)|
-|`source deactivate`       |(enter description or short answer here)|
-|`conda config --get channels`       |(enter description or short answer here)|
+|What is the purpose of having different environments?     |(So that we can use Python to perform a variety of purposes.)|
+|What is the default package manager in Python?            |(PIP)|
+|How do you manage environments and packages in Anaconda?  |(by using Anaconda or Miniconda which uses Conda to manage both environments and packages)|
+|`conda list`       |(lists packages installed on the computer)|
+|`conda env list`       |(lists the environments available)|
+|How do you keep your base environment unchanged?       |(we create a new environment in which we can install a different package without changing the base environment)|
+|What is the link to the Conda cheat sheet? (link in video notes is broken)      |(https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)|
+|`conda create --name XXXX`       |(creates a new environment)|
+|`source activate XXXX`       |(activates the new environment)|
+|`conda install YYYY`       |(installs a new package in the selected environment)|
+|channels in Conda       |(describes the path Conda will search to see if the package is available)|
+|`conda install -c ZZZZ YYYY`       |(installs a package from a different channel. One time only though, new channel is not available permanently)|
+|`conda config --show channels`       |(allows you to see the channels available)|
+|`conda config --add channels ZZZZ`       |(installs a channel in addition to the default channels. New channels are available in all environments)|
+|conda-forge.org       |(a community led collection for conda packages. And packages which are only available through conda-forge)|
+|`source deactivate`       |(source deactivate did not work. Conda deactivate deactivated the environment and returned me to my base)|
+|`conda config --get channels`       |(shows the priority in which Conda will look for different channels)|
 
 * After creating the environments he created in the video on your computer, what would the results of running the command `conda env list` look like with the da35 environment activated. Paste the output from your command prompt in the code block below.
 
 ```
 #Paste your results here.
 
-
+(da35) Julias-Air:~ juliareich$ conda env list
+# conda environments:
+#
+base                     /opt/anaconda3
+ai38                     /opt/anaconda3/envs/ai38
+da35                  *  /opt/anaconda3/envs/da35
 ```
 * What command would you use to remove the environments you created for this exercise from your computer?
 
 ```
 #Type the command here.
-
+In Anaconda Navigator I would select the environment and click remove.
+Per the cheat sheet: conda env remove --name bio-env
 ```
